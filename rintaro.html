@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <style>
+.banner {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+    
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+    
+</style>
+<head>
+<meta charset="UTF-8">
+<title>倫太郎</title>
+</head>
+<body>
+  <img src="002.png" class="banner">
+  <h1>倫太郎のページ</h1>
+  <h2>このページで今日の成果を報告！</h2>
+  <h2>毎日 楽しくポイントを貯めよう！！！</h2>
+  <h2>現在のポイント</h2>
+
+<p id="brotherPoint">読み込み中...</p>
+
+  <script>
+
+fetch("https://script.google.com/macros/s/AKfycbwgclJzs9GK1WDBdc_-r3MofJBGaHOe9G_51f9AP3jgbjiY_EnlZnPNAZ017IfRwiv4Rw/exec")
+
+.then(response => response.json())
+
+.then(data => {
+
+  document.getElementById("brotherPoint").textContent =
+    "倫太郎： " + data.brother + " pt";
+
+
+});
+
+</script>
+  
+</body>
+</html>
