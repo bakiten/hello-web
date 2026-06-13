@@ -43,11 +43,11 @@ h2 {
   <h1>ばき天ポイント</h1>
   <h2>このページで<br>今日の成果を報告！</h2>
   <h2>毎日 楽しく<br>ポイントを貯めよう！！！</h2>
-  <h2>現在のポイント</h2>
+  <h2>～ ☆★☆ 現在のポイント ☆★☆ ～</h2>
 
-<p id="brotherPoint" class="point-display">読み込み中...</p>
+<p id="brotherPoint" class="point-display" style="color: blue; font-weight: bold;"">読み込み中...</p>
 
-<p id="sisterPoint" class="point-display">読み込み中...</p>
+<p id="sisterPoint" class="point-display" style="color: gold; font-weight: bold;">読み込み中...</p>
 
 <br>
   
@@ -73,7 +73,7 @@ fetch("https://script.google.com/macros/s/AKfycbwgclJzs9GK1WDBdc_-r3MofJBGaHOe9G
     "倫太郎： " + data.brother + " pt";
 
   document.getElementById("sisterPoint").textContent =
-    "紗季： " + data.sister + " pt";
+    "紗　季： " + data.sister + " pt";
 
 });
 
