@@ -45,15 +45,55 @@ h2 {
 
 <p id="brotherPoint" display: block;>読み込み中...</p>
 
+<h2>今日のチャレンジ</h2>
+
 <div class="task-row">
-  <button class="big-button"
-          onclick="sendAction('daily')">
+  <button class="big-button" onclick="sendAction('daily')">
     デイリーボーナス
   </button>
+  <span id="dailyStatus" class="status">読み込み中...</span>
+</div>
 
-  <span id="dailyStatus">
-    読み込み中...
-  </span>
+<div class="task-row">
+  <button class="big-button" onclick="sendAction('tsubaki')">
+    つばきのお世話
+  </button>
+  <span id="tsubakiStatus" class="status">読み込み中...</span>
+</div>
+
+<div class="task-row">
+  <button class="big-button" onclick="sendAction('mealprep')">
+    食事の準備
+  </button>
+  <span id="mealPrepStatus" class="status">読み込み中...</span>
+</div>
+
+<div class="task-row">
+  <button class="big-button" onclick="sendAction('cooking')">
+    食事作り
+  </button>
+  <span id="cookingStatus" class="status">読み込み中...</span>
+</div>
+
+<div class="task-row">
+  <button class="big-button" onclick="sendAction('bath')">
+    お風呂洗い
+  </button>
+  <span id="bathStatus" class="status">読み込み中...</span>
+</div>
+
+<div class="task-row">
+  <button class="big-button" onclick="sendAction('trash')">
+    ごみ捨て
+  </button>
+  <span id="trashStatus" class="status">読み込み中...</span>
+</div>
+
+<div class="task-row">
+  <button class="big-button" onclick="sendAction('laundry')">
+    洗濯のお手伝い
+  </button>
+  <span id="laundryStatus" class="status">読み込み中...</span>
 </div>
 
   <script>
@@ -70,6 +110,26 @@ fetch("https://script.google.com/macros/s/AKfycbwgclJzs9GK1WDBdc_-r3MofJBGaHOe9G
   document.getElementById("dailyStatus").textContent =
     data.dailyStatus;
 
+document.getElementById("tsubakiStatus").textContent =
+    data.tsubakiStatus;
+
+document.getElementById("mealPrepStatus").textContent =
+    data.mealPrepStatus;
+
+document.getElementById("cookingStatus").textContent =
+    data.cookingStatus;
+
+document.getElementById("bathStatus").textContent =
+    data.bathStatus;
+
+document.getElementById("trashStatus").textContent =
+    data.trashStatus;
+
+document.getElementById("laundryStatus").textContent =
+    data.laundryStatus;
+
+
+  
 });
 
 function sendAction(actionName) {
